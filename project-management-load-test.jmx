@@ -1,0 +1,12 @@
+<testPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Project Management Load Test">
+  <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Load Test Users" enabled="true">
+    <stringProp name="ThreadGroup.num_threads">100</stringProp>
+    <stringProp name="ThreadGroup.ramp_time">60</stringProp>
+    <stringProp name="ThreadGroup.duration">300</stringProp>
+  </ThreadGroup>
+  <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Get All Projects" enabled="true">
+    <stringProp name="HTTPSampler.domain">{{baseUrl}}</stringProp>
+    <stringProp name="HTTPSampler.path">/projects</stringProp>
+    <stringProp name="HTTPSampler.method">GET</stringProp>
+  </HTTPSamplerProxy>
+</testPlan>
